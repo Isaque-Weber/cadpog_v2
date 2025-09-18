@@ -29,7 +29,7 @@ export default function PedidoOracao() {
                     </p>
                     <button
                         onClick={resetForm}
-                        className="bg-gradient-to-r from-rose-500 to-fuchsia-600 text-white px-6 py-2 rounded-lg hover:from-rose-600 hover:to-fuchsia-700 transition"
+                        className="bg-gradient-to-r from-rose-500 to-red-600 text-white px-6 py-2 rounded-lg hover:from-rose-600 hover:to-red-700 transition"
                     >
                         Enviar Novo Pedido
                     </button>
@@ -152,7 +152,7 @@ export default function PedidoOracao() {
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full bg-gradient-to-r from-rose-500 to-fuchsia-600 text-white py-3 px-4 rounded-md font-semibold hover:from-rose-600 hover:to-fuchsia-700 disabled:opacity-50 transition"
+                                className="w-full bg-gradient-to-r from-rose-500 to-red-600 text-white py-3 px-4 rounded-md font-semibold hover:from-rose-600 hover:to-red-700 disabled:opacity-50 transition"
                             >
                                 {isSubmitting ? "Enviando..." : "Enviar Pedido de Oração"}
                             </button>
