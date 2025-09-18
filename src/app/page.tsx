@@ -1,103 +1,151 @@
 import Image from "next/image";
+import FeatureCard from "@/components/FeatureCard";
+import {Button} from "@/components/Button";
+import {
+    ArrowRight,
+    LucideMessageCircle
+} from "lucide-react"
 
-export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+export default function HomePage() {
+    return (
+        <main className="relative flex flex-col items-center justify-center text-center gap-16 pb-24 sm:pb-28 lg:pb-36">
+            {/* Hero com overlay-blur */}
+            <section className="mx-auto w-[85vw]">
+                <div className="relative overflow-hidden rounded-2xl ring-1 ring-white/10
+                  bg-slate-900/70 backdrop-blur-sm
+                  px-6 lg:px-10 py-12
+                  flex flex-col lg:flex-row items-center justify-between gap-8">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+                    {/*/!* Glows decorativos (sem imagem de fundo) *!/*/}
+                    <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-blue-500/15 blur-3xl" />
+                    <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-yellow-400/10 blur-3xl" />
+
+                    <div className="relative z-10 flex-1 text-center lg:text-left">
+                        <h1 className="text-4xl lg:text-5xl font-bold leading-snug text-white">
+                            A igreja é mais que um lugar para <span className="text-yellow-400">frequentar</span>, é um lugar para chamar de <span className="text-blue-400">lar</span>
+                        </h1>
+                        <div className="flex flex-wrap gap-4 mt-8 justify-center lg:justify-start">
+                            <Button href="/congregacoes" variant="outline">Conheça</Button>
+                            <Button href="/pedido-oracao" variant="outline">Pedido de oração</Button>
+                            <Button href="/ofertar" variant="primary">Ofertar</Button>
+                        </div>
+                    </div>
+
+                    <div className="relative z-10 flex-1 flex gap-4 justify-center">
+                        <Image
+                            src="/img/igreja1.png"
+                            alt="Igreja"
+                            width={160}
+                            height={160}
+                            className="rounded-xl w-40 h-40 object-cover shadow-lg ring-1 ring-white/10"
+                            priority
+                            sizes="(min-width:1024px) 10rem, 10rem"
+                        />
+                        <Image
+                            src="/img/igreja2.png"
+                            alt="Culto"
+                            width={160}
+                            height={160}
+                            className="rounded-xl w-40 h-40 object-cover shadow-lg ring-1 ring-white/10"
+                            priority
+                            sizes="(min-width:1024px) 10rem, 10rem"
+                        />
+                    </div>
+                </div>
+            </section>
+
+
+            {/* Banner culto online */}
+            <section className="mx-auto w-[85vw]">
+                <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-white/10 h-20 sm:h-24 md:h-28 lg:h-32">
+                    {/* BG */}
+                    <Image
+                        src="/img/banner-culto-online.png"
+                        alt=""
+                        fill
+                        className="object-cover"
+                        sizes="80vw"
+                        priority
+                    />
+
+                    {/* Overlay para legibilidade */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/60" />
+
+                    {/* Conteúdo central (texto + botão) */}
+                    <div className="relative z-10 h-full flex items-center justify-center gap-3 sm:gap-4 px-4 text-white">
+                      <span className="text-sm sm:text-lg md:text-xl font-semibold text-center tracking-wide drop-shadow">
+                        Estamos online, veja nosso culto
+                      </span>
+                      <span
+                            className="inline-grid h-8 w-8 sm:h-9 sm:w-9 place-items-center rounded-full bg-white/15 ring-1 ring-white/30 backdrop-blur hover:bg-white/25 transition"
+                            aria-hidden="true"
+                        >
+                            <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
+                      </span>
+                    </div>
+                </div>
+            </section>
+
+
+            {/* Cards principais */}
+            <section className="mx-auto w-[85vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-stretch gap-8">
+                <FeatureCard
+                    icon={<Image src="/img/icon-church.svg" alt="Ícone de igrejas" width={24} height={24} />}
+                    title="Congregações"
+                    description="Venha nos conhecer! Encontre a igreja mais próxima de você."
+                    href="/congregacoes"
+                />
+
+                <FeatureCard
+                    icon={<Image src="/img/icon-oracao.svg" alt="Ícone de oração" width={24} height={24} />}
+                    title="Pedir oração"
+                    description="Sua fé em ação, faça um pedido de oração!"
+                    href="/pedido-oracao"
+                />
+
+                {/* Ofertar */}
+                <FeatureCard
+                    icon={<Image src="/img/icon-money.svg" alt="Ícone de oferta" width={24} height={24} />}
+                    title="Ofertar"
+                    description="É aqui que você pode contribuir para o nosso ministério! Vamos fazer a diferença juntos."
+                    href="/ofertar"
+                />
+
+                {/* Fale conosco */}
+                <FeatureCard
+                    icon={<LucideMessageCircle className="w-6 h-6" strokeWidth={1.8} aria-hidden="true" />}
+                    title="Fale conosco"
+                    description="Precisa de ajuda com algo? Não hesite em nos contatar!"
+                    href="/fale-conosco"
+                />
+            </section>
+
+            {/* Sobre nós */}
+            <section className="mx-auto w-[85vw]">
+                <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-white/10">
+                    {/* BG */}
+                    <Image
+                        src="/img/sobre-nos-bg.png"
+                        alt=""
+                        fill
+                        className="object-cover"
+                        sizes="80vw"
+                        priority={false}
+                    />
+
+                    {/* Overlay para legibilidade */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/70" />
+
+                    {/* Conteúdo central */}
+                    <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-6 py-10 sm:py-14 gap-4">
+                        <h2 className="text-2xl sm:text-3xl font-bold">Sobre nós</h2>
+                        <p className="max-w-2xl text-slate-200">
+                            Existimos para capacitar discípulos, liderar pelo exemplo e mudar as comunidades para melhor.
+                        </p>
+                        <Button href="/sobre-nos" variant="outline">Ler mais</Button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    );
 }
