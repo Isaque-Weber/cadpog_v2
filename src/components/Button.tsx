@@ -32,10 +32,10 @@ export function Button({
 
     const variantClasses: Record<NonNullable<ButtonProps["variant"]>, string> = {
         primary:
-            "text-white bg-gradient-to-b from-rose-500 to-fuchsia-600 " +
+            "text-white bg-gradient-to-r from-rose-500 to-red-600 " +
             "ring-1 ring-white/20 shadow-lg shadow-rose-900/20 " +
-            "hover:from-rose-400 hover:to-fuchsia-500 " +
-            "active:from-rose-600 active:to-fuchsia-700",
+            "hover:from-rose-600 hover:to-red-700 " +
+            "active:from-rose-700 active:to-red-800",
 
         secondary:
             "text-white bg-slate-800 hover:bg-slate-700 " +

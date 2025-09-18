@@ -11,8 +11,14 @@ export default function Footer() {
               <Image src="/img/logo-cadpog.png" alt="Logo CADPOG" width={40} height={40} className="object-contain" />
               <span className="ml-3 text-xl font-bold">CADPOG</span>
             </div>
+            <p className="text-shadow-gray-300 text-md leading-relaxed">
+              CATEDRAL DAS ASSEMBLÉIAS DE DEUS, DEUS DE PODER E GLÓRIA
+            </p>
             <p className="text-gray-300 text-sm leading-relaxed">
-              CATEDRAL DAS ASSEMBLÉIAS DE DEUS, DEUS DE PODER E GLÓRIA (ENDEREÇO DA MATRIZ)
+              <br/>Matriz - Av. Cesário de Melo, 8355 - Campo Grande, Rio de Janeiro - RJ
+            </p>
+            <p className="text-gray-300 text-sm leading-relaxed">
+                <br/>Sede - C. Feria de Jerez, 18, 29640 Fuengirola, Málaga, Espanha
             </p>
           </div>
 
