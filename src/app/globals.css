@@ -19,8 +19,14 @@
   }
 }
 
+@layer components {
+    .overlay-blur {
+        @apply absolute inset-0 bg-black/60 backdrop-blur-lg;
+    }
+}
+
 body {
-  background: var(--background);
+  background: transparent;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
