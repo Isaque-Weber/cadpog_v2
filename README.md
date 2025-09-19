@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CADPOG - Igreja em Células
 
-## Getting Started
+Este é o site da igreja CADPOG, uma igreja unida, que busca conectar pessoas a Deus e umas às outras.
 
-First, run the development server:
+## Sobre o Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O site da CADPOG é uma plataforma para membros e visitantes se conectarem com a igreja. Ele fornece informações sobre a igreja, seus ministérios, eventos e congregações. Os usuários também podem enviar pedidos de oração, fazer ofertas e entrar em contato com a equipe da igreja.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologias
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+*   [Next.js](https://nextjs.org/) - Framework React para produção
+*   [React](https://reactjs.org/) - Biblioteca JavaScript para construção de interfaces de usuário
+*   [TypeScript](https://www.typescriptlang.org/) - Superset de JavaScript que adiciona tipagem estática
+*   [Tailwind CSS](https://tailwindcss.com/) - Framework CSS para design rápido e responsivo
+*   [Nodemailer](https://nodemailer.com/) - Módulo para envio de e-mails em Node.js
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Começando
 
-## Learn More
+Para executar o projeto localmente, siga estas etapas:
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/seu-usuario/cadpog_v2.git
+    ```
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+3.  **Configure as variáveis de ambiente:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Crie um arquivo `.env.local` na raiz do projeto e adicione as seguintes variáveis:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```
+    # Configurações do servidor SMTP para envio de e-mails
+    SMTP_HOST="smtp.example.com"
+    SMTP_PORT=587
+    SMTP_USER="user@example.com"
+    SMTP_PASS="password"
+    
+    NODE_ENV=development
+    ```
 
-## Deploy on Vercel
+4.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Abra [http://localhost:3000](http://localhost:3000) em seu navegador para ver o resultado.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
