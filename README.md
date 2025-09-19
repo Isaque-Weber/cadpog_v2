@@ -1,4 +1,4 @@
-# CADPOG - Igreja em Células
+# CADPOG - Catedral das Assembléias de Deus, Deus de Poder e Glória
 
 Este é o site da igreja CADPOG, uma igreja unida, que busca conectar pessoas a Deus e umas às outras.
 
