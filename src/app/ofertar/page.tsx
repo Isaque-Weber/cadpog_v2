@@ -45,7 +45,7 @@ export default function Ofertar() {
                             </div>
                             <h3 className="text-xl font-semibold text-white mb-4">TED ou DOC</h3>
                             <p className="text-gray-300">Igreja Exemplo Brasil</p>
-                            <p className="text-gray-400">CNPJ: 00.000.000/0001-00</p>
+                            <p className="text-gray-400">CNPJ: 09.338.693/0001-00</p>
                             <p className="text-gray-400 mt-2">Banco Itaú</p>
                             <p className="text-gray-400">Agência: 1234</p>
                             <p className="text-gray-400">Conta: 56789-0</p>
@@ -64,11 +64,11 @@ export default function Ofertar() {
                                 />
                             </div>
                             <h3 className="text-xl font-semibold text-white mb-4">PIX</h3>
-                            <p className="text-gray-300 mb-2">Use a chave:</p>
-                            <p className="text-blue-400 font-mono">pix@igrejaexemplo.com.br</p>
+                            <p className="text-gray-300 mb-2">Use a chave CNPJ:</p>
+                            <p className="text-blue-400 font-mono">09.338.693/0001-00</p>
                             <p className="text-gray-400 mt-4">Ou escaneie o QR Code:</p>
                             <Image
-                                src="/qrcode-pix.png"
+                                src="/img/QRCodeIgreja.jpg"
                                 alt="QR Code Pix"
                                 width={176}
                                 height={176}

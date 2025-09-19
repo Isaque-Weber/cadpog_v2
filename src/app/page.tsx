@@ -10,15 +10,10 @@ export default function HomePage() {
     return (
         <main className="relative flex flex-col items-center justify-center text-center gap-16 pb-24 sm:pb-28 lg:pb-36">
             {/* Hero com overlay-blur */}
-            <section className="mx-auto w-[85vw]">
-                <div className="relative overflow-hidden rounded-2xl ring-1 ring-white/10
-                  bg-slate-900/70 backdrop-blur-sm
-                  px-6 lg:px-10 py-12
+            <div className="mx-auto w-[85vw] relative overflow-hidden rounded-2xl
+                  px-6 lg:px-10 py-12 mt-8
                   flex flex-col lg:flex-row items-center justify-between gap-8">
 
-                    {/*/!* Glows decorativos (sem imagem de fundo) *!/*/}
-                    <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-blue-500/15 blur-3xl" />
-                    <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-yellow-400/10 blur-3xl" />
 
                     <div className="relative z-10 flex-1 text-center lg:text-left">
                         <h1 className="text-4xl lg:text-5xl font-bold leading-snug text-white">
@@ -52,8 +47,6 @@ export default function HomePage() {
                         />
                     </div>
                 </div>
-            </section>
-
 
             {/* Banner culto online */}
             <section className="mx-auto w-[85vw]">
