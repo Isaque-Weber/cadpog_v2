@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Igreja CADPOG - Comunidade de Amor e Desenvolvimento",
   description: "Uma igreja comprometida com o amor de Cristo, buscando servir a comunidade e compartilhar a palavra de Deus com todos.",
+  icons: './favicon.png',
 };
 
 export default function RootLayout({
