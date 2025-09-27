@@ -71,7 +71,7 @@ export async function POST(req: Request) {
         // ========== Email de resposta (para o remetente) ==========
         if (body.email) {
             await transporter.sendMail({
-                from: `"Pedidos de Oração" <${process.env.SMTP_USER}>`,
+                from: `"Equipe de Intercessão e oração" <${process.env.SMTP_USER}>`,
                 to: body.email,
                 subject: "🙏 Recebemos seu pedido de oração",
                 html: `

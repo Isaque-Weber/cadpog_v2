@@ -17,7 +17,7 @@ export async function POST(req: Request) {
 
         // ========== Email interno (intercessão) ==========
         await transporter.sendMail({
-            from: `"Fale Conosco" <${process.env.SMTP_USER}>`,
+            from: `"Contato Via Fale Conosco" <${process.env.SMTP_USER}>`,
             to: "isaque.weber5@gmail.com", // Altere para o email real de destino
             subject: `Novo Contato - ${body.assunto}`,
             html: `
@@ -69,7 +69,7 @@ export async function POST(req: Request) {
         // ========== Email de resposta (para o remetente) ==========
         if (body.email) {
             await transporter.sendMail({
-                from: `"CADPOG" <${process.env.SMTP_USER}>`,
+                from: `"Equipe CADPOG" <${process.env.SMTP_USER}>`,
                 to: body.email,
                 subject: "Recebemos sua mensagem",
                 html: `
