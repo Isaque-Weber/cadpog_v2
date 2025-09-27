@@ -62,7 +62,7 @@ export async function POST(req: Request) {
             attachments: [
                 {
                     filename: "logo-cadpog.png",
-                    path: "./public/img/logo-cadpog-removebg-preview.png", // garante que o arquivo exista nesse path
+                    path: "https://cadpog.vercel.app/logo-cadpog-removebg-preview.png", // garante que o arquivo exista nesse path
                     cid: "logo-cadpog", // ID que é referenciado no src="cid:logo-cadpog"
                 },
             ],
@@ -112,7 +112,7 @@ export async function POST(req: Request) {
                 attachments: [
                     {
                         filename: "logo-cadpog.png",
-                        path: "./public/img/logo-cadpog-removebg-preview.png",
+                        path: "https://cadpog.vercel.app/logo-cadpog-removebg-preview.png",
                         cid: "logo-cadpog",
                     },
                 ],
